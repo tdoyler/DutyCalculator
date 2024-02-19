@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Duty Calculator</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="calculate.js"></script>
+	</head>
+	<body>
+		<h1>Duty Calculator</h1>
+		<!-- Case to Liter Calculation here. Maybe use a checkbox to show and hide this little form. Must push the liters to the liter input -->
+		<div id="input" class="input">
+			<div class="liter-container">
+				<label for="liters">Liters</label>
+				<input
+					type="number"
+					name="liters"
+					id="liters-input"
+					placeholder="Enter in cl"
+				/>
+
+				<input type="checkbox" name="hectoliters" id="hectoliters" />
+				<span>Check If The Numbers Being Entered Are Hectoliters</span>
+			</div>
+			<div class="alcohol-percentage">
+				<label for="alcohol-percentage">Alcohol Percentage</label>
+				<input
+					type="number"
+					name="alcohol-percentage"
+					id="alcohol-percentage-input"
+				/>
+			</div>
+			<div class="product-type">
+				<label for="">Product Type</label>
+				<select name="product-type" id="product-type-input">
+					<option value="0" default>Please Choose A Type</option>
+					<option value="1">
+						Still Wine - exceeding 5.5% volume but not exceeding 15% volume
+					</option>
+				</select>
+			</div>
+			<div class="calculate">
+				<button class="button" id="calculate-button" onclick="duty()">
+					Calculate Duty
+				</button>
+			</div>
+			<div class="duty-total">
+				<label for="duty">Duty Total: </label>
+				<span id="duty-output">€</span>
+			</div>
+		</div>
+	</body>
+	<script src="calculate.js"></script>
+</html>
